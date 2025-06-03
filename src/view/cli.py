@@ -14,6 +14,22 @@ class CLI:
       else:
         self.display_message("잘못된 입력입니다. 1, 2, 3 중 하나를 입력해주세요.", "error")
 
+  def display_logged_in_menu(self, username):
+    print(f"\n╔═════════════════════════════╗")
+    print(f"║ {username}님, 환영합니다!      ║")
+    print(f"╠═════════════════════════════╣")
+    print(f"║ 1. 로그아웃                  ║")
+    print(f"║ 2. 구현중                  ║")
+    print(f"╚═════════════════════════════╝")
+    while True:
+      choice = input("메뉴를 선택하세요.").strip()
+      if choice == "1":
+        return "1"
+      else:
+        self.display_message("잘못된 입력입니다. 메뉴를 확인해주세요.", "error")
+
+
+
   def get_register_details(self):
     print("\n--- 회원가입 ---")
     username = input("아이디 : ").strip()
